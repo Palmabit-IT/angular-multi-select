@@ -1038,7 +1038,7 @@ angular.module('pb-isteven-multi-select', ['ng']).directive('pbIstevenMultiSelec
 }]).run(['$templateCache', function ($templateCache) {
   var template =
     `<div class="multiSelect inlineBlock">
-      <div id="{{directiveId}}" style="cursor:pointer"
+      <div id="{{directiveId}}" style="cursor:pointer; height:30px"
           ng-bind="varButtonLabel"
           ng-click="toggleCheckboxes( $event ); refreshSelectedItems(); refreshButton(); prepareGrouping; prepareIndex();"
           ng-disabled="disable-button">
