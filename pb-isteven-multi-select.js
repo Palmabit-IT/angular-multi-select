@@ -1037,12 +1037,12 @@ angular.module('pb-isteven-multi-select', ['ng']).directive('pbIstevenMultiSelec
   }
 }]).run(['$templateCache', function ($templateCache) {
   var template =
-    `<span class="multiSelect inlineBlock">
-      <span id="{{directiveId}}" style="cursor:pointer"
+    `<div class="multiSelect inlineBlock">
+      <div id="{{directiveId}}" style="cursor:pointer"
           ng-bind="varButtonLabel"
           ng-click="toggleCheckboxes( $event ); refreshSelectedItems(); refreshButton(); prepareGrouping; prepareIndex();"
           ng-disabled="disable-button">
-      </span>
+      </div>
     <div class="checkboxLayer">
       <div class="helperContainer"
           ng-if="helperStatus.filter || helperStatus.all || helperStatus.none || helperStatus.reset ">
@@ -1108,6 +1108,6 @@ angular.module('pb-isteven-multi-select', ['ng']).directive('pbIstevenMultiSelec
     </div>
     </div>
     </div>
-  </span>`;
+  </div>`;
   $templateCache.put('isteven-multi-select.htm', template);
 }]);
